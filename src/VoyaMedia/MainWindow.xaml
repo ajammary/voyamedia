@@ -1,0 +1,77 @@
+﻿<Window 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="VoyaMedia.MainWindow"
+    xmlns:local="clr-namespace:VoyaMedia"
+    Title="Voya Media" 
+    Width="1920" 
+    Height="1080"
+    MinWidth="1600"
+    MinHeight="900"
+    Panel.ZIndex="100"
+    WindowStartupLocation="CenterScreen" 
+    WindowState="Maximized" 
+    WindowStyle="ThreeDBorderWindow" 
+    Closed="WindowMain_window_Closed"
+    KeyDown="WindowMain_window_KeyDown" 
+    MouseEnter="WindowMain_window_MouseEnter" 
+    MouseLeave="WindowMain_window_MouseLeave"
+    PreviewMouseDoubleClick="WindowMain_window_PreviewMouseDoubleClick"
+    PreviewMouseMove="WindowMain_window_PreviewMouseMove"
+    SizeChanged="WindowMain_window_SizeChanged"
+    StateChanged="WindowMain_window_StateChanged"
+    Icon="/VoyaMedia;component/Images/icon.ico"
+    Name="WindowMain_window">
+    
+<!-- Window Background -->
+<Window.Background>
+    <ImageBrush ImageSource="/VoyaMedia;component/Images/background_003.jpg" />
+</Window.Background>
+
+<Window.Resources>
+</Window.Resources>
+
+<!-- Main Window Grid -->
+<Grid Name="WindowMain_grid">
+
+<!-- Progress Loader (spinning wheel) -->
+<local:ProgressLoading Panel.ZIndex="100" />
+
+<!-- Top Status Panel -->
+<local:StatusTop Panel.ZIndex="1"  />
+
+<!-- Main Menu -->
+<local:MainMenu Panel.ZIndex="1"  />
+
+<!-- Search Panel -->
+<local:SearchPanel Panel.ZIndex="1"  />
+
+<!-- Media Browser -->
+<local:MediaBrowser Panel.ZIndex="1"  />
+
+<!-- Media Browser Right-Click Menu -->
+<local:MediaBrowserRightClickMenu Panel.ZIndex="100" />
+
+<!-- Media Browser Edit Mp3 Tags Window -->
+<local:MediaBrowserEditMp3Tags Panel.ZIndex="100" />
+
+<!-- Media Browser Rename Window -->
+<local:MediaBrowserRename Panel.ZIndex="100" />
+
+<!-- Media Browser Alternative Movie Details Menu -->
+<local:MediaBrowserAlternativeMovieDetailsMenu Panel.ZIndex="100" />
+
+<!-- Media Tags -->
+<local:MediaTags Panel.ZIndex="1" />
+
+<!-- Media Details Window -->
+<local:MediaDetails Panel.ZIndex="1" />
+
+<!-- Media Player Window -->
+<local:MediaPlayer Panel.ZIndex="1" />
+
+<!-- Bottom Status Panel -->
+<local:StatusBottom Panel.ZIndex="1" />
+
+</Grid>
+</Window>
